@@ -57,16 +57,36 @@ curl -X POST "http://127.0.0.1:8000/analyze-file-report" \
 ## Example response: output
 
 {
-  "status": "analyzed",
-  "saved_to": "reports/report_20260421_120000.json",
+  "status": "saved",
+  "saved_to": "REPORT\\report_20260421_175729.json",
   "report": {
-    "filename": "test.py",
-    "risk_score": 70,
-    "risk_level": "high",
-    "issues": [
-      "eval usage detected",
-      "hardcoded API key detected"
-    ],
-    "ai_insights": "The code contains high-risk patterns such as eval which may lead to code injection..."
+    "filename": "TEST 4 - MIXED REAL WORLD.py",
+    "status": "analyzed",
+    "summary": "Potential code injection risks detected.",
+    "risk": {
+      "score": 100,
+      "level": "high"
+    },
+    "results": {
+      "issues_found": 3,
+      "issues": [
+        {
+          "type": "dangerous function",
+          "severity": "high",
+          "description": "exec() use detected!"
+        },
+        {
+          "type": "API Key Exposure",
+          "severity": "high",
+          "description": "Token/API key inside the code"
+        },
+        {
+          "type": "User Input",
+          "severity": "low",
+          "description": "Input() detected"
+        }
+      ]
+    },
+    "ai_insights": "AI disabled (mock response for testing)"
   }
 }
