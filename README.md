@@ -47,7 +47,7 @@ The project is modular and organized as follows:
 ### Analyze file
 
 ```bash
-POST /analyze-file-report
+POST /analyze-file-report & AI
 
 ## Example Request: curl
 
