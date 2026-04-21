@@ -1,0 +1,14 @@
+{
+    "filename": "TEST 2 - CLEAN CODE.py",
+    "status": "analyzed",
+    "summary": "No security issues detected.",
+    "risk": {
+        "score": 0,
+        "level": "low"
+    },
+    "results": {
+        "issues_found": 0,
+        "issues": []
+    },
+    "ai_insights": "AI disabled (mock response for testing)"
+}
